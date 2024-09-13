@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
     <meta name="title" content="weather" />
-    <meta name="description" content="weather app made with vanilla js" />
+    <meta
+      name="description"
+      content="weather app made with vanilla js and weatherapi"
+    />
     <meta name="author" content="Yeswanth Sai Inturi" />
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
@@ -67,7 +70,7 @@
             </ul>
           </div>
         </div>
-        <div class="ehader-actions">
+        <div class="header-actions">
           <button
             class="icon-btn has-state"
             aria-label="open search"
@@ -97,7 +100,7 @@
           >
             <div class="card card-lg current-weather-card">
               <h2 class="title-2 card-title">Now</h2>
-              <div class="weapper">
+              <div class="wrapper">
                 <p class="heading">25&deg;<sup>c</sup></p>
                 <img
                   src="./assets/images/weather_icons/01d.png"
@@ -118,6 +121,68 @@
                   <span class="m-icon">location_on</span>
 
                   <p class="title-3 meta-text">London, GB</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section
+            class="section forecast"
+            aria-labelledby="forecast-label"
+            data-5-day-forecast
+          >
+            <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
+            <div class="card card-lg forecast-card">
+              <ul>
+                <li class="card-item">
+                  <div class="icon-wrapper">
+                    <img src="./assets/images/weather_icons/01d.png" width="36" height="36" alt="Overcast Clouds" class="weather-icon">
+                    <span class="span">
+                      <p class="title-2">25</p>
+                    </span>
+                  </div>
+                  <p class="label-1">17 Feb</p>
+                  <p class="label-1">Friday</p>
+                </li>
+                <li class="card-item">
+                  <div class="icon-wrapper">
+                    <img src="./assets/images/weather_icons/01d.png" width="36" height="36" alt="Overcast Clouds" class="weather-icon">
+                    <span class="span">
+                      <p class="title-2">25</p>
+                    </span>
+                  </div>
+                  <p class="label-1">17 Feb</p>
+                  <p class="label-1">Friday</p>
+                </li>
+                <li class="card-item">
+                  <div class="icon-wrapper">
+                    <img src="./assets/images/weather_icons/01d.png" width="36" height="36" alt="Overcast Clouds" class="weather-icon">
+                    <span class="span">
+                      <p class="title-2">25</p>
+                    </span>
+                  </div>
+                  <p class="label-1">17 Feb</p>
+                  <p class="label-1">Friday</p>
+                </li>
+                <li class="card-item">
+                  <div class="icon-wrapper">
+                    <img src="./assets/images/weather_icons/01d.png" width="36" height="36" alt="Overcast Clouds" class="weather-icon">
+                    <span class="span">
+                      <p class="title-2">25</p>
+                    </span>
+                  </div>
+                  <p class="label-1">17 Feb</p>
+                  <p class="label-1">Friday</p>
+                </li>
+                <li class="card-item">
+                  <div class="icon-wrapper">
+                    <img src="./assets/images/weather_icons/01d.png" width="36" height="36" alt="Overcast Clouds" class="weather-icon">
+                    <span class="span">
+                      <p class="title-2">25</p>
+                    </span>
+                  </div>
+                  <p class="label-1">17 Feb</p>
+                  <p class="label-1">Friday</p>
                 </li>
               </ul>
             </div>

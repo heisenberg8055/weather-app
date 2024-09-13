@@ -7,6 +7,9 @@
 \*-----------------------------------*/
 
 :root {
+  /** 
+    * COLORS
+    */
   --primary: #b5a1e5;
   --on-primary: #100e17;
   --background: #131214;
@@ -31,6 +34,7 @@
   --white-alpha-8: hsla(0, 0%, 100%, 0.08);
   --black-alpha-10: hsla(0, 0%, 0%, 0.1);
 
+  /* gradient colors */
   --gradient-1: linear-gradient(
     180deg,
     hsla(270, 5%, 7%, 0) 0%,
@@ -44,8 +48,14 @@
     hsl(260, 5%, 12%) 100%
   );
 
+  /**
+    * FONT
+    */
+
+  /* font family */
   --ff-nunito-sans: "Nunito Sans", sans-serif;
 
+  /* font size */
   --heading: 5.6rem;
   --title-1: 2rem;
   --title-2: 1.8rem;
@@ -56,16 +66,29 @@
   --label-1: 1.4rem;
   --label-2: 1.2rem;
 
+  /* font weight */
   --weight-regular: 400;
   --weight-semiBold: 600;
 
+  /**
+    * BOX SHADOW
+    */
+
   --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
   --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
+
+  /**
+    * BORDER RADIUS
+    */
 
   --radius-28: 28px;
   --radius-16: 16px;
   --radius-pill: 500px;
   --radius-circle: 50%;
+
+  /**
+    * TRANSITION
+    */
 
   --transition-short: 100ms ease;
 }
@@ -77,9 +100,9 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 li {
@@ -109,6 +132,7 @@ button {
   border: none;
   color: inherit;
   font: inherit;
+  cursor: inherit;
 }
 
 input {
@@ -118,6 +142,7 @@ input {
 button {
   cursor: pointer;
 }
+
 sub {
   vertical-align: baseline;
 }
@@ -133,7 +158,7 @@ sup {
 
 html {
   font-family: var(--ff-nunito-sans);
-  font-size: 10x;
+  font-size: 10px;
   scroll-behavior: smooth;
 }
 
@@ -142,6 +167,7 @@ body {
   color: var(--on-background);
   font-size: var(--body-3);
   overflow: hidden;
+  /* height: 300vh; */
 }
 
 :focus-visible {
@@ -335,6 +361,19 @@ body {
   font-size: var(--label-2);
 }
 
+.fade-in {
+  animation: fade-in 250ms ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -371,7 +410,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh;
+  height: 100svh; /* for mobile browser */
   background-color: var(--surface);
   color: var(--on-surface);
   clip-path: circle(4% at calc(100% - 102px) 5%);
@@ -481,7 +520,7 @@ body {
 
 main {
   height: calc(100vh - 80px);
-  height: calc(100svh - 80px);
+  height: calc(100svh - 80px); /* for mobile browser */
   overflow: hidden;
 }
 
@@ -491,7 +530,7 @@ article.container {
   grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: auto; /* for firefox */
   overflow-y: overlay;
 }
 
@@ -793,7 +832,7 @@ article.container::before {
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh;
+  height: 100svh; /* for moblie browser */
   background-color: var(--background);
   flex-direction: column;
   justify-content: center;
@@ -810,12 +849,19 @@ article.container::before {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
+/**
+ * responsive for large than 768px screen
+ */
+
 @media (min-width: 768px) {
-  /* REUSED STYLE */
+  /**
+   * REUSED STYLE
+   */
 
   .container {
     padding: 24px;
   }
+
   .title-1 {
     --title-1: 2.4rem;
   }
@@ -839,7 +885,9 @@ article.container::before {
     right: 20px;
   }
 
-  /* HEADER  */
+  /**
+   * HEADER
+   */
 
   .header-actions {
     gap: 24px;
@@ -857,11 +905,13 @@ article.container::before {
     clip-path: circle(3% at calc(100% - 273px) 6%);
   }
 
-  /* MAIN */
+  /**
+   * MAIN
+   */
 
   main {
     height: calc(100vh - 96px);
-    height: calc(100svh - 96px);
+    height: calc(100svh - 96px); /* for mobile browser */
   }
 
   article.container {
@@ -926,11 +976,24 @@ article.container::before {
   }
 }
 
+/**
+ * responsive for large than 1200px screen
+ */
+
 @media (min-width: 1200px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+
   :root {
+    /* font size */
     --heading: 8rem;
     --title-2: 2rem;
   }
+
+  /**
+   * REUSED STYLE
+   */
 
   .container {
     padding: 40px;
@@ -952,7 +1015,9 @@ article.container::before {
     column-gap: 24px;
   }
 
-  /* HEADER */
+  /**
+   * HEADER
+   */
 
   .header .icon-btn {
     display: none;
@@ -1021,7 +1086,8 @@ article.container::before {
     width: 100%;
     max-height: 360px;
     border-radius: 0 0 var(--radius-28) var(--radius-28);
-    overflow-y: auto;
+    border-block-start: 1px solid var(--outline);
+    overflow-y: auto; /* for firefox */
     overflow-y: overlay;
   }
 
@@ -1041,11 +1107,13 @@ article.container::before {
     filter: drop-shadow(var(--shadow-2));
   }
 
-  /* MAIN */
+  /**
+   * MAIN
+   */
 
   main {
     height: calc(100vh - 120px);
-    height: calc(100svh - 120px);
+    height: calc(100svh - 120px); /* for moblie browser */
   }
 
   article.container {
@@ -1077,6 +1145,10 @@ article.container::before {
     gap: 16px;
   }
 }
+
+/**
+ * responsive for large than 1400px screen
+ */
 
 @media (min-width: 1400px) {
   .highlight-list {

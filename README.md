@@ -22,10 +22,10 @@ Weather based on various Scenarios
 ## Screenshots
 
 #### PC View
-![App Screenshot](./assets/images/pc-view.png)
+![App Screenshot](./assets/images/pc-view.png "PC View")
 
 #### Mobile View
-![App Screenshot](./assets/images/mobile-view.png)
+![App Screenshot](./assets/images/mobile-view.png "Mobile View")
 
 ## Run Locally
 

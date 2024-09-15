@@ -1,7 +1,7 @@
 
-# Project Title
+# Weather App
 
-A Weather App built using Vanilla JS and Open Weather API
+Built using Vanilla JS and Open Weather API
 
 ## Tech Stack
 
@@ -56,7 +56,7 @@ Open with live server
 
 ## Authors
 
-- [@heisenberg8055](https://www.github.com/heisenberg)
+- [@heisenberg8055](https://www.github.com/heisenberg8055)
 
 ## License
 
